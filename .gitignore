@@ -1,0 +1,25 @@
+# Never commit originals, mappings or credentials
+*.private.*
+private/
+tmp/
+mapping*
+*PRIVATE*
+original*
+credentials*
+*credential*
+*.key
+*.pem
+*.p12
+.env
+.env.*
+secrets*
+*.secret
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+__pycache__/
+*.pyc
+*.pyo

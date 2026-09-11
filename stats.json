@@ -1,0 +1,66 @@
+{
+ "session_start": "2026-08-20T22:45:01.987000Z",
+ "session_end": "2026-08-28T20:42:39.045000Z",
+ "session_id_placeholder": "session-<SESSION_001>",
+ "event_count": 25464,
+ "event_types": {
+  "tool-call-chunks": 12135,
+  "reasoning-chunks": 5756,
+  "assistant/chunk": 3364,
+  "text-chunks": 1418,
+  "tool/code-dispatch-start": 413,
+  "tool/code-dispatch": 413,
+  "step/start": 338,
+  "step/end": 338,
+  "assistant/message": 328,
+  "tool/call": 311,
+  "tool/result": 311,
+  "agent/inbox/spliced": 133,
+  "user/message": 65,
+  "turn/start": 39,
+  "turn/end": 34,
+  "request/header": 14,
+  "session/end-seed": 14,
+  "approval/asked": 10,
+  "approval/decided": 10,
+  "todo/write": 3,
+  "web/deepseek-search-llm-request": 3,
+  "permission/preset": 2,
+  "sandbox/mode": 2,
+  "approval/policy": 2,
+  "session/title": 2,
+  "session": 1,
+  "agent-preset/selected": 1,
+  "request/context": 1,
+  "session/title-llm-request": 1,
+  "command/run": 1,
+  "command/done": 1
+ },
+ "request_count": 14,
+ "assistant_message_count": 328,
+ "tool_call_count": 311,
+ "tool_result_count": 311,
+ "turn_count": 39,
+ "step_count": 338,
+ "providers": {
+  "deepseek-official": 344,
+  "session-title-first-prompt-llm": 1
+ },
+ "models": {
+  "deepseek-v4-pro": 344,
+  "deepseek-v4-flash": 3
+ },
+ "reasoning_efforts": {
+  "max": 14
+ },
+ "tools": {
+  "run_code": 311
+ },
+ "token_totals": {
+  "input_tokens": 8022712,
+  "output_tokens": 626882,
+  "reasoning_tokens": 170160,
+  "cache_read_tokens": 196450048
+ },
+ "note": "Client-observable counts only; absent fields are omitted, never estimated."
+}

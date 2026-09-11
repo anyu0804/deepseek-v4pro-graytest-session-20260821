@@ -1,0 +1,3 @@
+# Force LF line endings for JSONL and designate binary files
+*.jsonl text eol=lf
+*.zstd binary

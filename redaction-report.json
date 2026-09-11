@@ -1,0 +1,133 @@
+{
+ "source_fingerprint": "withheld",
+ "source_compressed_bytes": 7554216,
+ "source_event_count": 25464,
+ "output_event_count": 25464,
+ "json_parse_errors": 0,
+ "json_parse_error_samples": [],
+ "broken_call_links": 0,
+ "redacted_categories": {
+  "call": 16762,
+  "email": 86,
+  "generalized": 76,
+  "group": 622,
+  "phone": 2,
+  "qq": 240,
+  "session": 5,
+  "token": 1335
+ },
+ "redacted_literal_classes": {
+  "contact": 50,
+  "group_name": 341,
+  "project": 264,
+  "winuser": 2921
+ },
+ "secret_scan_findings": [],
+ "secret_findings_total": 0,
+ "stream_reassembly": {
+  "groups_rewritten": 657,
+  "characters_dropped": 557796
+ },
+ "generator": {
+  "script": "scripts/redact_session.py",
+  "deterministic": true,
+  "two_pass_stream_aware": true
+ },
+ "verification": {
+  "jsonl_parse": "PASS",
+  "event_count": "PASS",
+  "event_type_sequence": "PASS",
+  "tool_links": "PASS",
+  "zstd_roundtrip": "PASS",
+  "secret_scan": "PASS",
+  "windows_username_scan": "PASS",
+  "qq_id_scan": "PASS",
+  "private_literal_scan": "PASS",
+  "private_literal_classes_checked": [
+   "contact",
+   "group_name",
+   "project",
+   "winuser"
+  ],
+  "generalized_phrase_scan": "PASS",
+  "raw_call_id_scan": "PASS",
+  "cross_chunk_reconstruction_scan": "PASS",
+  "verifier_verdict": "PASS",
+  "publication_privacy_scan": "PASS"
+ },
+ "verification_detail": {
+  "scan_units": {
+   "serialized_event_lines": 25464,
+   "reassembled_streams": 1000,
+   "note": "event lines are scanned verbatim; each streaming group is also scanned after reconstruction, because fragments can split a value"
+  },
+  "redacted_sha256": "926208743d95b12f1714d25ff28fda4ba245c7117af0fc1837db0b678a8c4d80",
+  "residual_email_candidates": 0,
+  "residual_phone_candidates": 0,
+  "generalized_phrase_residue": {},
+  "hard_failures": []
+ },
+ "semantic_closure": {
+  "private_naming_corpus": {
+   "class": "project",
+   "note": "private corpus identifiers, not ordinary personal names; simplified and traditional spellings of one entity share a single stable placeholder",
+   "entities": 2,
+   "raw_residue": 0
+  },
+  "user_portrait": {
+   "method": "generalize map in the private seed (substring rewrite in the neutral pre-pass)",
+   "rewrites_applied": 76,
+   "residual_source_phrases": 0,
+   "retained_on_purpose": [
+    "language preference",
+    "user idioms with meanings",
+    "stated verification/rollback preferences"
+   ]
+  },
+  "pipeline_unchanged": "stream reconstruction, two-pass architecture, call-id canonicalisation and session-id mapping are untouched"
+ },
+ "high_entropy_findings_total": 2,
+ "high_entropy_findings_reviewed": 2,
+ "high_entropy_findings_unresolved": 0,
+ "high_entropy_review": {
+  "method": "classify, never blanket-delete; only credential-shaped values are destroyed",
+  "classification": "pnpm integrity-hash fragments inside public package directory names"
+ },
+ "sampling_review": {
+  "reasoning_strings": 50,
+  "tool_result_strings": 50,
+  "request_headers": 14,
+  "assistant_messages": 20,
+  "long_strings": 20,
+  "outcome": "no identity or credential residue observed; relationships and readability intact"
+ },
+ "manual_review": {
+  "email_residue": "none",
+  "phone_residue": "none",
+  "semantic_review": "no person/nickname/corpus/user-portrait residue remains; classes enumerated from the private seed and each verified as 0",
+  "accepted_residuals": "two pnpm integrity-hash fragments in public package paths",
+  "retained_by_design": "language preference, user idioms with meanings, verification/rollback working preferences (no identity link)"
+ },
+ "publish_gates": {
+  "json_parse_errors_zero": true,
+  "event_count_equal": true,
+  "broken_links_zero": true,
+  "zstd_roundtrip": true,
+  "secret_scan": true,
+  "username_scan": true,
+  "qq_id_scan": true,
+  "private_literal_scan": true,
+  "generalized_phrase_scan": true,
+  "raw_call_id_scan": true,
+  "source_fingerprint_withheld": true,
+  "verifier_verdict_pass": true,
+  "publication_privacy_scan": true
+ },
+ "safe_to_publish": true,
+ "notes": [
+  "All values are derived from the artifacts, never estimated.",
+  "Scan unit is the serialized event line (25,464) plus 1,000 reassembled streams.",
+  "This report contains no original identifiers and no secret values.",
+  "Client-observable evidence only; no server-side inference is made or implied."
+ ]
+}
